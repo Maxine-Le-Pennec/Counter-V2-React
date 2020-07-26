@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+.header {
+  padding-top: 55px;
+  padding-bottom: 30px;
+  padding-left: 96px;
+  display: flex;
+  justify-content: center;
+  height: 82px;
+  border-bottom: 1px #e5e5e5 solid;
+  width: 100vw;
+  max-width: 1900px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.icone {
+  font-size: 90px;
+  color: #5c48d3;
+  margin-right: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header h1 {
+  font-size: 48px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 60px;
+}
+.allCounter {
+  display: flex;
+}
+.counterBox {
+  height: 150px;
+  width: 150px;
+  background-color: #5c48d3;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  border-style: none;
+  background-color: white;
+}
+.addButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.addButton button {
+  height: 70px;
+  width: 250px;
+  background-color: #5c48d3;
+  color: white;
+  border-radius: 10px;
+  /* margin: 60px; */
+  font-size: 32px;
+  line-height: 39px;
+}
+
+.allCounter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+}
+
+.counterButtons {
+  display: flex;
+  margin-bottom: 60px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 96px;
+  line-height: 117px;
+}
+.minusPlus {
+  font-size: 60px;
+  margin: 0 20px 0 20px;
+}
+.reset {
+  width: 150px;
+  height: 60px;
+  background-color: #5c48d3;
   color: white;
+  border-radius: 10px;
+  font-size: 32px;
+  line-height: 39px;
 }
 
-.App-link {
-  color: #61dafb;
+/* .disabbled:disabled {
+  color: grey;
+} */
+
+.disabledd::disabled {
+  color: #e8e3e3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* .addDisabled::disabled {
+  color: blue;
+} */
+
+.counter {
+  display: flex;
 }
+
+footer {
+  text-align: center;
+  margin-top: 190px;
+}
+
+a {
+  text-decoration: none;
+  color: #5c48d3;
+  font-weight: bold;
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+}
+.remove button {
+  margin-top: 70px;
+  height: 70px;
+  width: 250px;
+  background-color: #5c48d3;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 39px;
+}
+
+/* @media (max-width: 1232px) {
+  header h1 {
+    display: none;
+  }
+  header {
+    display: flex;
+    justify-content: center;
+  }
+} */

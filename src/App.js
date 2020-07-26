@@ -1,24 +1,72 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Counter from "./components/Counter";
+import "./App.css";
+
+// Import fontAwsome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faStopwatch,
+  faMinus,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faStopwatch, faMinus, faPlus);
 
 function App() {
+  const [counter, setCounter] = useState([0]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="container">
+      <div>
+        <header className="header">
+          <span className="icone">
+            <FontAwesomeIcon icon="stopwatch" />
+          </span>
+          <h1>Counter version 2</h1>
+        </header>
+      </div>
+      <div className="addButton">
+        {counter.length < 3 ? (
+          <button
+            onClick={() => {
+              const newCounter = [...counter];
+              newCounter.push(0);
+              setCounter(newCounter);
+            }}
+          >
+            Add counter
+          </button>
+        ) : (
+          <button className="addDisabled" disabled>
+            Add counter
+          </button>
+        )}
+      </div>
+
+      <body>
+        <Counter value={counter} func={setCounter}></Counter>
+      </body>
+      <div className="remove">
+        <button
+          onClick={() => {
+            const newValue = [0];
+            setCounter(newValue);
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          Remove all
+        </button>
+      </div>
+
+      <footer>
+        <p>
+          Made with <a href="https://fr.reactjs.org/">React</a> at&nbsp;
+          <a href="www.lereacteur.io">&nbsp;Le Reacteur</a>
+          &nbsp;by{" "}
+          <a href="https://github.com/Marine-Le-Pennec">
+            &nbsp;Marine Le Pennec
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
