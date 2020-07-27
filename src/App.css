@@ -53,7 +53,7 @@ button {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-.addButton button {
+.firstAddButton {
   height: 70px;
   width: 250px;
   background-color: #5c48d3;
@@ -94,17 +94,20 @@ button {
   line-height: 39px;
 }
 
-/* .disabbled:disabled {
-  color: grey;
-} */
-
 .disabledd::disabled {
   color: #e8e3e3;
 }
 
-/* .addDisabled::disabled {
-  color: blue;
-} */
+.addDisabled:disabled {
+  height: 70px;
+  width: 250px;
+  background-color: grey;
+  color: white;
+  border-radius: 10px;
+
+  font-size: 32px;
+  line-height: 39px;
+}
 
 .counter {
   display: flex;

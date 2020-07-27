@@ -28,6 +28,7 @@ function App() {
       <div className="addButton">
         {counter.length < 3 ? (
           <button
+            className="firstAddButton"
             onClick={() => {
               const newCounter = [...counter];
               newCounter.push(0);
@@ -47,14 +48,20 @@ function App() {
         <Counter value={counter} func={setCounter}></Counter>
       </body>
       <div className="remove">
-        <button
-          onClick={() => {
-            const newValue = [0];
-            setCounter(newValue);
-          }}
-        >
-          Remove all
-        </button>
+        {counter.length > 1 ? (
+          <button
+            onClick={() => {
+              const newValue = [0];
+              setCounter(newValue);
+            }}
+          >
+            Remove all
+          </button>
+        ) : (
+          <button className="addDisabled" disabled>
+            Remove all
+          </button>
+        )}
       </div>
 
       <footer>
